@@ -1,3 +1,4 @@
+from myfun import cls, pause
 
 def add(x,y): return x+y
 def subtract(x,y): return x-y
@@ -8,6 +9,7 @@ nome=input('Seu nome: ')
 op=0
 
 while int(op)!=5:
+  cls()
   print()
   print("Menu")
   print("1 - soma")
@@ -22,9 +24,8 @@ while int(op)!=5:
     break
   x=input('x? ')
   y=input('y? ')
-  nome= f'Olá {nome.upper()}'
   print()
-  print(nome)
+  print("Olá", nome.upper())
   print('resposta: ', end='')
   if int(op)==1:
     print(add(int(x),int(y)))
@@ -34,6 +35,8 @@ while int(op)!=5:
     print(mult(int(x),int(y)))
   elif int(op)==4:
     print(div(int(x),int(y)))
+  print()
+  pause()
             
 
 print('Fim')
